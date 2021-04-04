@@ -16,16 +16,16 @@ brew:
 
 dev:
 	asdf plugin add golang
-	asdf install golang latest
-	asdf global golang $(asdf list golang)
 	asdf plugin add nodejs
-	asdf install nodejs latest
-	asdf global nodejs $(asdf list nodejs)
 	asdf plugin add python
-	asdf install python latest
-	asdf global python $(asdf list python)
 	asdf plugin add terraform
+	asdf install golang latest
+	asdf install nodejs latest
+	asdf install python latest
 	asdf install terraform latest
+	asdf global golang $(asdf list golang)
+	asdf global nodejs $(asdf list nodejs)
+	asdf global python $(asdf list python)
 	asdf global terraform $(asdf list terraform)
 
 prompt:
@@ -39,7 +39,7 @@ link:
 	ln -sf $(DOTDIR)/.wgetrc $(HOME)/.wgetrc
 	ln -sf $(DOTDIR)/aws $(HOME)/.aws
 	ln -sf $(DOTDIR)/kitty/kitty.conf $(HOME)/.config/kitty/kitty.conf
-	ln -sf $(DOTDIR)/ssh/config $(HOME)/.ssh/config
+	# ln -sf $(DOTDIR)/ssh/config $(HOME)/.ssh/config
 	ln -sf $(DOTDIR)/zsh/.zshenv $(HOME)/.zshenv
 	ln -sf $(DOTDIR)/zsh/.zshrc $(HOME)/.zshrc
 
@@ -48,7 +48,7 @@ unlink:
 	unlink $(HOME)/.config/kitty/kitty.conf
 	unlink $(HOME)/.curlrc
 	unlink $(HOME)/.mackup.cfg
-	unlink $(HOME)/.ssh/config
+	# unlink $(HOME)/.ssh/config
 	unlink $(HOME)/.vimrc
 	unlink $(HOME)/.wgetrc
 	unlink $(HOME)/.zshenv
