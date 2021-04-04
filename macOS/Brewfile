@@ -56,7 +56,6 @@ cask 'aerial'
 cask 'alfred'
 cask 'anki'
 cask 'burp-suite'
-cask 'caffeine'
 cask 'docker'
 cask 'firefox'
 cask 'flux'
@@ -89,6 +88,7 @@ cask 'font-open-sans'
 cask 'font-roboto'
 
 # Mac App Store
+mas 'Amphetamine', id: 937984704
 mas 'Bear', id: 1091189122
 mas 'DaftCloud', id: 1320450034
 mas 'Dato', id: 1470584107
