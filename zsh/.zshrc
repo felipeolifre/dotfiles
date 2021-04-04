@@ -34,3 +34,6 @@ source $(brew --prefix asdf)/asdf.sh
 
 # Temporary workaround for https://github.com/asdf-vm/asdf/issues/428
 ASDF_DIR=$(brew --prefix asdf)
+
+# Set JAVA_HOME
+source $HOME/.asdf/plugins/java/set-java-home.zsh
