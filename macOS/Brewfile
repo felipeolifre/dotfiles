@@ -6,6 +6,7 @@ tap 'homebrew/bundle'
 
 # Binaries
 brew 'awscli'
+brew 'bfg'  # Remove secrets from Git history
 brew 'binwalk'  # Searches a binary image for embedded files and executable code
 brew 'cloc'  # Statistics utility to count lines of code
 brew 'colordiff'
