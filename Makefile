@@ -40,7 +40,7 @@ link:
 	ln -sf $(DOTDIR)/.mackup.cfg $(HOME)/.mackup.cfg
 	ln -sf $(DOTDIR)/.vimrc $(HOME)/.vimrc
 	ln -sf $(DOTDIR)/.wgetrc $(HOME)/.wgetrc
-	ln -sf $(DOTDIR)/aws $(HOME)/.aws
+	ln -sf $(DOTDIR)/aws/cli/alias $(HOME)/.aws/cli/alias
 	ln -sf $(DOTDIR)/git/.gitconfig $(HOME)/.gitconfig
 	ln -sf $(DOTDIR)/git/.gitignore $(HOME)/.gitignore
 	ln -sf $(DOTDIR)/kitty/kitty.conf $(HOME)/.config/kitty/kitty.conf
@@ -53,7 +53,7 @@ unlink:
 	unlink $(HOME)/.mackup.cfg
 	unlink $(HOME)/.vimrc
 	unlink $(HOME)/.wgetrc
-	unlink $(HOME)/.aws
+	unlink $(HOME)/.aws/cli/alias
 	unlink $(HOME)/.gitconfig
 	unlink $(HOME)/.gitignore
 	unlink $(HOME)/.config/kitty/kitty.conf

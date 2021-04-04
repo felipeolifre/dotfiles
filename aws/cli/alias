@@ -1,0 +1,6 @@
+[toplevel]
+
+whoami = sts get-caller-identity
+
+# List or set your region
+region = !f() { [[ $# -eq 1 ]] && aws configure set region "$1" || aws configure get region; }; f
