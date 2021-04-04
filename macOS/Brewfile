@@ -25,7 +25,6 @@ brew 'httpie'  # User-friendly cURL replacement (command-line HTTP client)
 brew 'hub'  # CLI tool that makes Git easier to use with GitHub
 brew 'ipcalc'
 brew 'jq'  # Lightweight and flexible command-line JSON processor
-brew 'mackup'  # Keep your Mac's application settings in sync
 brew 'mas'  # Mac App Store command-line interface
 brew 'nikto'
 brew 'nmap'
