@@ -16,14 +16,17 @@ brew:
 
 dev:
 	asdf plugin add golang
+	asdf plugin add java
 	asdf plugin add nodejs
 	asdf plugin add python
 	asdf plugin add terraform
 	asdf install golang latest
+	asdf install java $(asdf list-all java | grep  openjdk | tail -n 1)
 	asdf install nodejs latest
 	asdf install python latest
 	asdf install terraform latest
 	asdf global golang $(asdf list golang)
+	asdf global java $(asdf list java)
 	asdf global nodejs $(asdf list nodejs)
 	asdf global python $(asdf list python)
 	asdf global terraform $(asdf list terraform)
