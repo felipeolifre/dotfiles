@@ -1,0 +1,101 @@
+# Taps
+tap 'homebrew/cask'
+tap 'homebrew/cask-fonts'
+tap 'homebrew/cask-versions'
+tap 'homebrew/bundle'
+
+# Binaries
+brew 'awscli'
+brew 'binwalk'  # Searches a binary image for embedded files and executable code
+brew 'cloc'  # Statistics utility to count lines of code
+brew 'colordiff'
+brew 'coreutils'  # GNU file, shell, and text utilities
+brew 'exa'  # Modern replacement for ls
+brew 'exiftool'
+brew 'findutils'
+brew 'ffmpeg'  # Play, record, convert, and stream audio and video
+brew 'gcc'
+brew 'git'
+brew 'gnupg'
+brew 'grc'  # Colorize logfiles and command output
+brew 'grep'
+brew 'htop'
+brew 'httpie'  # User-friendly cURL replacement (command-line HTTP client)
+brew 'hub'  # CLI tool that makes Git easier to use with GitHub
+brew 'ipcalc'
+brew 'jq'  # Lightweight and flexible command-line JSON processor
+brew 'mackup'  # Keep your Mac's application settings in sync
+brew 'mas'  # Mac App Store command-line interface
+brew 'nikto'
+brew 'nmap'
+brew 'osquery'  # SQL powered operating system instrumentation and analytics
+brew 'pkg-config'
+brew 'qlcolorcode'  # Quick Look (Preview) plugin for code
+brew 'qlmarkdown'  # Quick Look (Preview) plugin for markdown documents
+brew 'qlstephen'  # Quick Look (Preview) plugin for plain-text files without a file extension
+brew 'quicklook-json'  # Quick Look (Preview) plugin for JSON documents
+brew 'sshuttle'
+brew 'testssl'
+brew 'tig'  # GUI-like interface for Git
+brew 'tldr'  # Simplified and community-driven man pages
+brew 'theharvester'
+brew 'trash'  # CLI tool that moves files or folder to the trash
+brew 'tree'  # List directories in a tree structure
+brew 'vim'
+brew 'xsv'  # CLI tool for indexing, slicing, analyzing, splitting and joining CSV files
+brew 'zlib'  # Needed for Memcached
+brew 'zsh-autosuggestions'
+
+# Development
+brew 'asdf'
+brew 'ipython'
+
+# Apps
+cask '1password'
+cask 'aerial'
+cask 'alfred'
+cask 'anki'
+cask 'burp-suite'
+cask 'caffeine'
+cask 'docker'
+cask 'firefox'
+cask 'flux'
+cask 'google-chrome'
+cask 'imageoptim'
+cask 'insomnia'
+cask 'kitty'
+cask 'logitech-presentation'
+cask 'lulu'
+cask 'nordvpn'
+cask 'openinterminal-lite'  # Finder Toolbar app to open the current directory in Terminal
+cask 'rectangle'  # Move and resize windows with keyboard shortcuts
+cask 'signal'
+cask 'slack'
+cask 'tableplus'  # GUI tool for relational databases
+cask 'the-unarchiver'
+cask 'transmission'
+cask 'virtualbox'
+cask 'virtualbox-extension-pack'
+cask 'visual-studio-code'
+cask 'vlc'
+cask 'wireshark'
+cask 'zoom'
+
+# Fonts
+cask 'font-fira-code'
+cask 'font-jetbrains-mono'
+cask 'font-lato'
+cask 'font-open-sans'
+cask 'font-roboto'
+
+# Mac App Store
+mas 'Bear', id: 1091189122
+mas 'DaftCloud', id: 1320450034
+mas 'Dato', id: 1470584107
+mas 'HazeOver', id: 430798174
+mas 'Microsoft Excel', id: 462058435
+mas 'Microsoft PowerPoint', id: 462062816
+mas 'Microsoft Word', id: 462054704
+mas 'Spark', id: 1176895641
+mas 'Speedtest', id: 1153157709
+mas 'WhatsApp', id: 1147396723

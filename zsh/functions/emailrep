@@ -1,0 +1,2 @@
+# Basic email OSINT
+curl --silent emailrep.io/$1 | jq;

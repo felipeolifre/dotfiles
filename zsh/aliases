@@ -1,0 +1,106 @@
+###############################################################################
+# Command Aliases                                                             #
+###############################################################################
+
+# Easier navigation
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+
+# Directories
+alias dotfiles='cd $HOME/.dotfiles'
+alias library='cd $HOME/Library'
+alias workspace='cd $HOME/Workspace'
+
+# Shortcuts
+alias g='git'
+alias tf='terraform'
+
+# Prefer the modern `exa` over traditional `ls`
+alias ls='exa'
+
+# List hidden directories and files
+alias lh='exa --all --list-dirs .*'
+
+# List in long format
+alias ll='exa --all --long'
+
+# List in tree format
+alias lt='exa --all --long --tree --level=2'
+
+# Enable aliases to be sudo’ed
+alias sudo='sudo '
+
+# Get macOS software updates, and update Homebrew, npm, and their packages
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm install npm -g; npm update -g;'
+
+# Google Chrome
+alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
+
+# Mozilla Firefox
+alias firefox='/Applications/Firefox.app/Contents/MacOS/firefox-bin'
+
+# Open files with macOS Preview
+alias preview='open -a Preview'
+
+# Reload the shell (i.e. invoke as a login shell)
+alias reload='exec ${SHELL} -l'
+
+# Print each PATH entry on a separate line
+alias path='echo -e ${PATH//:/\\n}'
+
+# Create intermediate directories as required, listing them as they are created
+alias mkdir='mkdir -pv'
+
+# Make the file search case-insensitive
+alias locate='locate -i'
+
+# Same as `diff`, but with a pretty 'syntax' highlighting
+alias diff='colordiff'
+
+# Colorize Nmap output
+alias nmap='grc nmap'
+
+# Prefer `vim` over `vi`
+alias vi='vim'
+
+# ¯\_(ツ)_/¯
+alias shrug='echo "¯\_(ツ)_/¯" | pbcopy'
+
+###############################################################################
+# Global Aliases (substituted anywhere on a line)                             #
+###############################################################################
+
+# IP addresses
+alias -g ip='curl --disable --silent https://icanhazip.com/'
+alias -g localip='ipconfig getifaddr en0'
+
+# Give `pbcopy` a more intuitive name
+alias -g clip='pbcopy'
+
+# Canonical hex+ASCII display hexdump
+alias -g hexdump='hexdump -C'
+
+# Compute SHA message digest
+alias -g sha1='openssl sha1'
+alias -g sha224='openssl sha224'
+alias -g sha256='openssl sha256'
+alias -g sha384='openssl sha384'
+alias -g sha512='openssl sha512'
+
+# Always enable colored `grep` output
+# Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage
+alias -g grep='grep --color=auto'
+alias -g fgrep='fgrep --color=auto'
+alias -g egrep='egrep --color=auto'
+
+###############################################################################
+# Suffix Aliases                                                              #
+###############################################################################
+
+# Open JPG, JPEG, PDF, and PNG files with macOS Preview
+alias -s {jpg,JPG}='preview'
+alias -s {jpeg,JPEG}='preview'
+alias -s {pdf,PDF}='preview'
+alias -s {png,PNG}='preview'
