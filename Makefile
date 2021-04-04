@@ -45,6 +45,7 @@ link:
 	ln -sf $(DOTDIR)/git/.gitignore $(HOME)/.gitignore
 	ln -sf $(DOTDIR)/kitty/kitty.conf $(HOME)/.config/kitty/kitty.conf
 	ln -sf $(DOTDIR)/ssh/config $(HOME)/.ssh/config
+	ln -sf $(DOTDIR)/vscode/settings.json $(HOME)/Library/Application\ Support/Code/User/settings.json
 	ln -sf $(DOTDIR)/zsh/.zshenv $(HOME)/.zshenv
 	ln -sf $(DOTDIR)/zsh/.zshrc $(HOME)/.zshrc
 
@@ -58,6 +59,7 @@ unlink:
 	unlink $(HOME)/.gitignore
 	unlink $(HOME)/.config/kitty/kitty.conf
 	unlink $(HOME)/.ssh/config
+	unlink $(HOME)/Library/Application\ Support/Code/User/settings.json
 	unlink $(HOME)/.zshenv
 	unlink $(HOME)/.zshrc
 	@printf "\\033[32m✓\\033[0m Symlinks removed. Manually remove ~/.dotfiles directory if needed.\\n"
