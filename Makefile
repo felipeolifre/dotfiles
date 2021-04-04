@@ -41,19 +41,23 @@ link:
 	ln -sf $(DOTDIR)/.vimrc $(HOME)/.vimrc
 	ln -sf $(DOTDIR)/.wgetrc $(HOME)/.wgetrc
 	ln -sf $(DOTDIR)/aws $(HOME)/.aws
+	ln -sf $(DOTDIR)/git/.gitconfig $(HOME)/.gitconfig
+	ln -sf $(DOTDIR)/git/.gitignore $(HOME)/.gitignore
 	ln -sf $(DOTDIR)/kitty/kitty.conf $(HOME)/.config/kitty/kitty.conf
 	ln -sf $(DOTDIR)/ssh/config $(HOME)/.ssh/config
 	ln -sf $(DOTDIR)/zsh/.zshenv $(HOME)/.zshenv
 	ln -sf $(DOTDIR)/zsh/.zshrc $(HOME)/.zshrc
 
 unlink:
-	unlink $(HOME)/.aws
-	unlink $(HOME)/.config/kitty/kitty.conf
 	unlink $(HOME)/.curlrc
 	unlink $(HOME)/.mackup.cfg
-	unlink $(HOME)/.ssh/config
 	unlink $(HOME)/.vimrc
 	unlink $(HOME)/.wgetrc
+	unlink $(HOME)/.aws
+	unlink $(HOME)/.gitconfig
+	unlink $(HOME)/.gitignore
+	unlink $(HOME)/.config/kitty/kitty.conf
+	unlink $(HOME)/.ssh/config
 	unlink $(HOME)/.zshenv
 	unlink $(HOME)/.zshrc
 	@printf "\\033[32m✓\\033[0m Symlinks removed. Manually remove ~/.dotfiles directory if needed.\\n"
