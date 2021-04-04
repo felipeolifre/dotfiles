@@ -1,2 +1,2 @@
 # Basic IP address OSINT
-curl --silent ipinfo.io/$1 | jq "del(.readme)";
+curl --user-agent 'curl' --silent ipinfo.io/$1 | jq "del(.readme)";
