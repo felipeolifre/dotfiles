@@ -19,8 +19,9 @@ autoload -Uz \
 # Enable Zsh completion system
 compinit
 
-# Enable Zsh autosuggestions 
+# Enable Zsh autosuggestions and set suggestion strategy
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+export ZSH_AUTOSUGGEST_STRATEGY=(completion history)
 
 # Enable Zsh syntax highlighting 
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
