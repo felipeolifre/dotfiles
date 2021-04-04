@@ -37,3 +37,6 @@ ASDF_DIR=$(brew --prefix asdf)
 
 # Set JAVA_HOME
 source $HOME/.asdf/plugins/java/set-java-home.zsh
+
+# Enable emacs keybindings
+bindkey -e
