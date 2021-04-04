@@ -42,7 +42,7 @@ link:
 	ln -sf $(DOTDIR)/.wgetrc $(HOME)/.wgetrc
 	ln -sf $(DOTDIR)/aws $(HOME)/.aws
 	ln -sf $(DOTDIR)/kitty/kitty.conf $(HOME)/.config/kitty/kitty.conf
-	# ln -sf $(DOTDIR)/ssh/config $(HOME)/.ssh/config
+	ln -sf $(DOTDIR)/ssh/config $(HOME)/.ssh/config
 	ln -sf $(DOTDIR)/zsh/.zshenv $(HOME)/.zshenv
 	ln -sf $(DOTDIR)/zsh/.zshrc $(HOME)/.zshrc
 
@@ -51,7 +51,7 @@ unlink:
 	unlink $(HOME)/.config/kitty/kitty.conf
 	unlink $(HOME)/.curlrc
 	unlink $(HOME)/.mackup.cfg
-	# unlink $(HOME)/.ssh/config
+	unlink $(HOME)/.ssh/config
 	unlink $(HOME)/.vimrc
 	unlink $(HOME)/.wgetrc
 	unlink $(HOME)/.zshenv
