@@ -48,9 +48,6 @@ sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setloggingmode on
 # Enable stealth mode
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode on
 
-# Prevent downloaded software from being whitelisted automatically
-sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setallowsignedapp off
-
 # Restart the Application Firewall process
 sudo pkill -HUP socketfilterfw
 
