@@ -37,6 +37,9 @@ defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
+# Disable Screenshot and Empty Trash sound effect
+defaults write com.apple.systemsound com.apple.sound.uiaudio.enabled -int 0
+
 ###############################################################################
 # Trackpad, keyboard, and Bluetooth accessories                               #
 ###############################################################################
