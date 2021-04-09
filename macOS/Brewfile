@@ -52,7 +52,6 @@ brew 'ipython'
 
 # Apps
 cask '1password'
-cask 'aerial'
 cask 'alfred'
 cask 'anki'
 cask 'burp-suite'
