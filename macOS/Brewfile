@@ -36,7 +36,6 @@ brew 'qlstephen'  # Quick Look (Preview) plugin for plain-text files without a f
 brew 'quicklook-json'  # Quick Look (Preview) plugin for JSON documents
 brew 'sshuttle'
 brew 'testssl'
-brew 'texlive'
 brew 'tig'  # GUI-like interface for Git
 brew 'tldr'  # Simplified and community-driven man pages
 brew 'theharvester'
@@ -71,6 +70,7 @@ cask 'rectangle'  # Move and resize windows with keyboard shortcuts
 cask 'signal'
 cask 'slack'
 cask 'tableplus'  # GUI tool for relational databases
+cask 'mactex-no-gui'
 cask 'the-unarchiver'
 cask 'transmission'
 cask 'virtualbox'
