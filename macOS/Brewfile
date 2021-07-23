@@ -42,7 +42,6 @@ brew 'trash'  # CLI tool that moves files or folder to the trash
 brew 'tree'  # List directories in a tree structure
 brew 'vim'
 brew 'xsv'  # CLI tool for indexing, slicing, analyzing, splitting and joining CSV files
-brew 'zlib'  # Needed for Memcached
 brew 'zsh-autosuggestions'
 
 # Development
