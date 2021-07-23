@@ -19,7 +19,6 @@ brew 'gcc'
 brew 'git'
 brew 'gnupg'
 brew 'grc'  # Colorize logfiles and command output
-brew 'grep'
 brew 'htop'
 brew 'httpie'  # User-friendly cURL replacement (command-line HTTP client)
 brew 'hub'  # CLI tool that makes Git easier to use with GitHub
