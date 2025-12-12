@@ -1,9 +1,54 @@
 {
+    // === General Editor ===
     "editor.minimap.enabled": true,
-    "prettier.tabWidth": 4,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontSize": 13,
+    "editor.fontLigatures": true,
     "editor.formatOnSave": true,
-    "prettier.proseWrap": "always",
+    "editor.smoothScrolling": true,
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.rulers": [
+        80,
+        100
+    ],
+    "editor.wordWrap": "on",
+    "editor.suggestSelection": "first",
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    },
+    // === Whitespace & newline hygiene ===
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    // === Prettier ===
+    "prettier.tabWidth": 4,
+    "prettier.proseWrap": "preserve",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.tabSize": 2
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.tabSize": 2
+    },
+    "[python]": {
+        "editor.tabSize": 4
+    },
+    "[terraform]": {
+        "editor.tabSize": 4
+    },
+    // === Workbench / Themes ===
+    "workbench.colorTheme": "One Dark Pro",
+    "workbench.preferredDarkColorTheme": "One Dark Pro",
+    "workbench.preferredLightColorTheme": "GitHub Light",
     "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    // === Peacock Project Colors ===
     "peacock.favoriteColors": [
         {
             "name": "Angular Red",
@@ -58,38 +103,29 @@
             "value": "#42b883"
         }
     ],
-    "editor.suggestSelection": "first",
-    "editor.fontFamily": "Jetbrains Mono",
-    "terraform.languageServer": {
-        "external": true,
-        "args": [
-            "serve"
-        ]
-    },
+    // === Terminal ===
+    "terminal.integrated.fontSize": 13,
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
+    // === Explorer ===
+    "explorer.confirmDragAndDrop": false,
+    // === GitHub Copilot ===
+    "github.copilot.nextEditSuggestions.enabled": true,
+    // === LaTeX Workshop ===
     "latex-workshop.view.pdf.viewer": "tab",
     "[latex]": {
         "editor.formatOnPaste": false,
         "editor.suggestSelection": "recentlyUsedByPrefix",
         "editor.wordWrap": "on"
     },
-    "editor.rulers": [
-        80,
-        100
-    ],
-    "workbench.colorTheme": "One Dark Pro",
-    "workbench.preferredDarkColorTheme": "One Dark Pro",
-    "workbench.preferredLightColorTheme": "GitHub Light",
-    "editor.fontSize": 13,
-    "editor.fontLigatures": true,
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
-    "terminal.integrated.fontSize": 13,
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    // === Terraform Language Server ===
+    "terraform.languageServer": {
+        "external": true,
+        "args": [
+            "serve"
+        ]
     },
-    "explorer.confirmDragAndDrop": false
+    // === Screens / Optional Improvements ===
+    "editor.minimap.renderCharacters": true,
+    "editor.renderWhitespace": "boundary",
+    "editor.formatOnPaste": true
 }
