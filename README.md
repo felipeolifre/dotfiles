@@ -1,6 +1,6 @@
 # dotfiles
 
-Files for configuring a terminal environment and other various system settings,
+Files for configuring a terminal environment and other system settings,
 centered around macOS. Check out [this guide](https://dotfiles.github.io) to
 dotfiles on GitHub for more info.
 
@@ -19,8 +19,10 @@ $ make link
 
 -   Set up [Homebrew](https://brew.sh) and installs all packages defined in the
     [Brewfile](macOS/Brewfile).
--   Set up the latest available version for `Golang`, `Java`, `Node.js`,
-    `Python` and `Terraform` system-wide using [asdf](https://asdf-vm.com/#/).
+-   Set up the latest stable `Python` using
+    [uv](https://github.com/astral-sh/uv).
+-   Set up the latest [nvm](https://github.com/nvm-sh/nvm) release and ensures
+    `Node.js` and [npm](https://www.npmjs.com/) are available system-wide.
 -   Set up the [pure](https://github.com/sindresorhus/pure) shell prompt.
 -   Configures preferred system defaults defined in
     [`/macOS/defaults.sh`](macOS/defaults.sh).
