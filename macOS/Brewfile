@@ -1,99 +1,68 @@
-# Taps
-tap 'homebrew/cask'
-tap 'homebrew/cask-fonts'
-tap 'homebrew/cask-versions'
-tap 'homebrew/bundle'
+# --- Binaries ------------------------------------------------------------------------------------
 
-# Binaries
-brew 'awscli'
-brew 'bfg'  # Remove secrets from Git history
-brew 'binwalk'  # Searches a binary image for embedded files and executable code
-brew 'cloc'  # Statistics utility to count lines of code
-brew 'colordiff'
-brew 'coreutils'  # GNU file, shell, and text utilities
-brew 'exa'  # Modern replacement for ls
-brew 'exiftool'
-brew 'findutils'
-brew 'ffmpeg'  # Play, record, convert, and stream audio and video
-brew 'gcc'
-brew 'git'
-brew 'gnupg'
-brew 'grc'  # Colorize logfiles and command output
-brew 'htop'
-brew 'httpie'  # User-friendly cURL replacement (command-line HTTP client)
-brew 'hub'  # CLI tool that makes Git easier to use with GitHub
-brew 'ipcalc'
-brew 'jq'  # Lightweight and flexible command-line JSON processor
-brew 'mas'  # Mac App Store command-line interface
-brew 'nikto'
-brew 'nmap'
-brew 'osquery'  # SQL powered operating system instrumentation and analytics
-brew 'pkg-config'
-brew 'qlcolorcode'  # Quick Look (Preview) plugin for code
-brew 'qlmarkdown'  # Quick Look (Preview) plugin for markdown documents
-brew 'qlstephen'  # Quick Look (Preview) plugin for plain-text files without a file extension
-brew 'quicklook-json'  # Quick Look (Preview) plugin for JSON documents
-brew 'sshuttle'
-brew 'testssl'
-brew 'tig'  # GUI-like interface for Git
-brew 'tldr'  # Simplified and community-driven man pages
-brew 'theharvester'
-brew 'trash'  # CLI tool that moves files or folder to the trash
-brew 'tree'  # List directories in a tree structure
-brew 'vim'
-brew 'xsv'  # CLI tool for indexing, slicing, analyzing, splitting and joining CSV files
-brew 'zsh-autosuggestions'
+brew "binwalk"                 # Searches a binary image for embedded files and executable code
+brew "cloc"                    # Statistics utility to count lines of code
+brew "coreutils"               # GNU File, Shell, and Text utilities
+brew "exiftool"                # Perl lib for reading and writing EXIF metadata
+brew "ffmpeg"                  # Play, record, convert, and stream audio and video
+brew "findutils"               # Collection of GNU find, xargs, and locate
+brew "git"                     # Distributed revision control system
+brew "gnupg"                   # GNU Privacy Guard (OpenPGP)
+brew "gpgme"                   # Library access to GnuPG
+brew "grc"                     # Colorize logfiles and command output
+brew "hopenpgp-tools"          # Command-line tools for OpenPGP-related operations
+brew "htop"                    # Improved top (interactive process viewer)
+brew "httpie"                  # User-friendly cURL replacement (command-line HTTP client)
+brew "icu4c@76"                # C/C++ and Java libraries for Unicode and globalization
+brew "ipcalc"                  # Calculate various network masks, etc. from a given IP address
+brew "jq"                      # Lightweight and flexible command-line JSON processor
+brew "nikto"                   # Web server scanner
+brew "nmap"                    # Port scanning utility for large networks
+brew "pinentry-mac"            # Pinentry for GPG on Mac
+brew "pipx"                    # Execute binaries from Python packages in isolated environments
+brew "pkgconf"                 # Package compiler and linker metadata toolkit
+brew "pure"                    # Pretty, minimal and fast ZSH prompt
+brew "rbenv"                   # Ruby version manager
+brew "sshuttle"                # Proxy server that works as a poor man's VPN
+brew "streamrip"               # Scriptable music downloader
+brew "telnet"                  # User interface to the TELNET protocol
+brew "testssl"                 # Tool which checks for the support of TLS/SSL ciphers and flaws
+brew "tldr"                    # Simplified and community-driven man pages
+brew "vim"                     # Vi 'workalike' with many additional features
+brew "wget"                    # Internet file retriever
+brew "ykman"                   # Tool for managing your YubiKey configuration
+brew "ykpers"                  # YubiKey personalization library and tool
+brew "zsh"                     # UNIX shell (command interpreter)
+brew "zsh-autosuggestions"     # Fish-like fast/unobtrusive autosuggestions for zsh
+brew "zsh-syntax-highlighting" # Fish shell like syntax highlighting for zsh
 
-# Development
-brew 'asdf'
-brew 'ipython'
+# --- Applications --------------------------------------------------------------------------------
 
-# Apps
-cask '1password'
-cask 'alfred'
-cask 'anki'
-cask 'burp-suite'
-cask 'docker'
-cask 'firefox'
-cask 'flux'
-cask 'google-chrome'
-cask 'imageoptim'
-cask 'insomnia'
-cask 'kitty'
-cask 'logitech-presentation'
-cask 'lulu'
-cask 'nordvpn'
-cask 'openinterminal-lite'  # Finder Toolbar app to open the current directory in Terminal
-cask 'rectangle'  # Move and resize windows with keyboard shortcuts
-cask 'signal'
-cask 'slack'
-cask 'tableplus'  # GUI tool for relational databases
-cask 'mactex-no-gui'
-cask 'the-unarchiver'
-cask 'transmission'
-cask 'virtualbox'
-cask 'virtualbox-extension-pack'
-cask 'visual-studio-code'
-cask 'vlc'
-cask 'wireshark'
-cask 'zoom'
+cask "bruno"                   # Open source IDE for exploring and testing APIs
+cask "docker-desktop"          # Build and share containerized applications and microservices
+cask "thunderbird"             # Customizable email client
+cask "transmission"            # Open-source BitTorrent client
+cask "visual-studio-code"      # Open-source code editor
+cask "vlc"                     # Multimedia player
+cask "wireshark-app"           # Network protocol analyzer
+cask "zoom"                    # Video communication and virtual meeting platform
 
-# Fonts
-cask 'font-fira-code'
-cask 'font-jetbrains-mono'
-cask 'font-lato'
-cask 'font-open-sans'
-cask 'font-roboto'
+# --- Fonts ---------------------------------------------------------------------------------------
 
-# Mac App Store
-mas 'Amphetamine', id: 937984704
-mas 'Bear', id: 1091189122
-mas 'DaftCloud', id: 1320450034
-mas 'Dato', id: 1470584107
-mas 'HazeOver', id: 430798174
-mas 'Microsoft Excel', id: 462058435
-mas 'Microsoft PowerPoint', id: 462062816
-mas 'Microsoft Word', id: 462054704
-mas 'Spark', id: 1176895641
-mas 'Speedtest', id: 1153157709
-mas 'WhatsApp', id: 1147396723
+cask "font-fira-code"
+
+# --- VSCode Extensions ---------------------------------------------------------------------------
+
+vscode "eamodio.gitlens"
+vscode "github.copilot"
+vscode "github.copilot-chat"
+vscode "github.vscode-github-actions"
+vscode "ms-python.debugpy"
+vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
+vscode "ms-python.vscode-python-envs"
+vscode "ms-vscode.makefile-tools"
+vscode "pavlitsky.yard"
+vscode "rebornix.ruby"
+vscode "tyriar.sort-lines"
+vscode "wingrunr21.vscode-ruby"
