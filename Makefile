@@ -1,12 +1,14 @@
 DOTDIR := $(shell echo $(HOME)/.dotfiles)
+NVM_DIR := $(HOME)/.nvm
 
-.PHONY: macos brew dev prompt link unlink
+.PHONY: macos brew pipx uv python nvm prompt link unlink
 
-macos: brew dev prompt
+macos: brew pipx uv python nvm prompt
 	bash $(DOTDIR)/macOS/defaults.sh
 	bash $(DOTDIR)/macOS/security.sh
 	softwareupdate --install --all
 
+# === Homebrew installation ===
 brew:
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 	export HOMEBREW_NO_INSECURE_REDIRECT=1
@@ -14,36 +16,58 @@ brew:
 	brew update
 	brew bundle --file=$(DOTDIR)/macOS/Brewfile
 
-dev:
-	asdf plugin add golang
-	asdf plugin add java
-	asdf plugin add nodejs
-	asdf plugin add python
-	asdf plugin add terraform
-	asdf install golang latest
-	asdf install java $(asdf list-all java | grep  openjdk | tail -n 1)
-	asdf install nodejs latest
-	asdf install python latest
-	asdf install terraform latest
-	asdf global golang $(asdf list golang)
-	asdf global java $(asdf list java)
-	asdf global nodejs $(asdf list nodejs)
-	asdf global python $(asdf list python)
-	asdf global terraform $(asdf list terraform)
+# === pipx installation ===
+pipx:
+	@echo "Installing pipx..."
+	brew install pipx
+	@export PATH="$${PATH}:$$(python3 -m site --user-base)/bin"; \
+	pipx ensurepath; \
+	sudo pipx ensurepath --global || true
+	@if ! pipx list | grep -q '^uv '; then \
+		pipx install uv; \
+	fi
 
+# === uv setup (installed via pipx) ===
+uv: pipx
+	@echo "Ensuring uv is installed..."
+	@if ! command -v uv >/dev/null 2>&1; then \
+		pipx run uv --version >/dev/null 2>&1; \
+	fi
+
+# === Python installation via uv ===
+python: uv
+	@echo "Installing default Python via uv..."
+	# Install latest Python if not already installed
+	@if ! uv list | grep -q '^python '; then \
+		uv install python latest; \
+	fi
+	uv use python latest
+	@echo "Python version now active: $$(python3 --version)"
+
+# === NVM installation ===
+nvm:
+	@echo "Installing or updating NVM to the latest release..."
+	@LATEST=$$(curl -s https://api.github.com/repos/nvm-sh/nvm/releases/latest | grep '"tag_name":' | sed -E 's/.*"v([^"]+)".*/\1/'); \
+	if [ ! -d "$(NVM_DIR)" ]; then \
+		curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v$$LATEST/install.sh | bash; \
+	else \
+		cd $(NVM_DIR) && git fetch --tags origin && git checkout v$$LATEST; \
+	fi
+	@echo "NVM installed at $(NVM_DIR)"
+
+# === Prompt setup ===
 prompt:
 	exec zsh
 	npm install --global pure-prompt
 
+# === Symlink configuration ===
 link:
 	ln -sf $(DOTDIR)/.curlrc $(HOME)/.curlrc
-	ln -sf $(DOTDIR)/.mackup.cfg $(HOME)/.mackup.cfg
 	ln -sf $(DOTDIR)/.vimrc $(HOME)/.vimrc
 	ln -sf $(DOTDIR)/.wgetrc $(HOME)/.wgetrc
 	ln -sf $(DOTDIR)/aws/cli/alias $(HOME)/.aws/cli/alias
 	ln -sf $(DOTDIR)/git/.gitconfig $(HOME)/.gitconfig
 	ln -sf $(DOTDIR)/git/.gitignore $(HOME)/.gitignore
-	ln -sf $(DOTDIR)/kitty/kitty.conf $(HOME)/.config/kitty/kitty.conf
 	ln -sf $(DOTDIR)/ssh/config $(HOME)/.ssh/config
 	ln -sf $(DOTDIR)/vscode/settings.json $(HOME)/Library/Application\ Support/Code/User/settings.json
 	ln -sf $(DOTDIR)/zsh/.zshenv $(HOME)/.zshenv
@@ -51,13 +75,11 @@ link:
 
 unlink:
 	unlink $(HOME)/.curlrc
-	unlink $(HOME)/.mackup.cfg
 	unlink $(HOME)/.vimrc
 	unlink $(HOME)/.wgetrc
 	unlink $(HOME)/.aws/cli/alias
 	unlink $(HOME)/.gitconfig
 	unlink $(HOME)/.gitignore
-	unlink $(HOME)/.config/kitty/kitty.conf
 	unlink $(HOME)/.ssh/config
 	unlink $(HOME)/Library/Application\ Support/Code/User/settings.json
 	unlink $(HOME)/.zshenv
