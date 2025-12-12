@@ -8,28 +8,34 @@
 # Command Search Path                                                         #
 ###############################################################################
 
-# Load Node global installed binaries
-PATH="$HOME/.node/bin:$PATH"
-
-# Use project specific binaries before global ones
-export PATH="node_modules/.bin:vendor/bin:$PATH"
+# Add third-party functions to FPATH
+export FPATH="/opt/homebrew/share/zsh/site-functions:$FPATH"
 
 ###############################################################################
 # Other Environment Variables                                                 #
 ###############################################################################
 
 # Dotfiles location
-export DOTFILES=$HOME/.dotfiles
+export DOTFILES="$HOME/.dotfiles"
 
 # Preferred editor
 export EDITOR="vim"
 
 # Manually set language environment
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
+export LC_ALL="en_US.UTF-8"
+export LANG="en_US.UTF-8"
 
 # Prevent Homebrew redirecting from secure HTTPS to insecure HTTP
 export HOMEBREW_NO_INSECURE_REDIRECT=1
 
 # Require all Homebrew casks to have a checksum
 export HOMEBREW_CASK_OPTS=--require-sha
+
+# Disable Homebrew hints
+export HOMEBREW_NO_ENV_HINTS=1
+
+# Set NVM working directory
+export NVM_DIR="$HOME/.nvm"
+
+# Disable Zsh session history
+export ZSH_DISABLE_SESSION_HISTORY=1

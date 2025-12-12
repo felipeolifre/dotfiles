@@ -26,18 +26,22 @@ export ZSH_AUTOSUGGEST_STRATEGY=(completion history)
 # Enable Zsh syntax highlighting 
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# Load NVM and NVM shell completion
+[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
+
+# Load pipx shell autocompletions
+eval "$(register-python-argcomplete pipx)"
+
+# Load rbenv automatically
+eval "$(rbenv init - zsh)"
+
 # Initialize `pure` prompt
 promptinit
 prompt pure
 
-# Add `asdf` to shell
-source $(brew --prefix asdf)/asdf.sh
-
-# Temporary workaround for https://github.com/asdf-vm/asdf/issues/428
-ASDF_DIR=$(brew --prefix asdf)
-
-# Set JAVA_HOME
-source $HOME/.asdf/plugins/java/set-java-home.zsh
-
 # Enable emacs keybindings
 bindkey -e
+
+# Set GPG teletypewriter
+export GPG_TTY=$(tty)

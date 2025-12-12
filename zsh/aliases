@@ -18,22 +18,22 @@ alias g='git'
 alias tf='terraform'
 
 # Prefer the modern `exa` over traditional `ls`
-alias ls='exa'
+#alias ls='exa'
 
 # List hidden directories and files
-alias lh='exa --all --list-dirs .*'
+#alias lh='exa --all --list-dirs .*'
 
 # List in long format
-alias ll='exa --all --long'
+#alias ll='exa --all --long'
 
 # List in tree format
-alias lt='exa --all --long --tree --level=2'
+#alias lt='exa --all --long --tree --level=2'
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
 # Get macOS software updates, and update Homebrew, npm, and their packages
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm install npm -g; npm update -g;'
+alias update='brew update; brew upgrade; brew upgrade --cask; brew cleanup; brew autoremove; npm update -g; pipx upgrade-all;'
 
 # Google Chrome
 alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
@@ -49,6 +49,9 @@ alias reload='exec ${SHELL} -l'
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
+
+# Print each FPATH entry on a separate line
+alias fpath='echo -e ${FPATH//:/\\n}'
 
 # Create intermediate directories as required, listing them as they are created
 alias mkdir='mkdir -pv'
@@ -81,13 +84,6 @@ alias -g clip='pbcopy'
 
 # Canonical hex+ASCII display hexdump
 alias -g hexdump='hexdump -C'
-
-# Compute SHA message digest
-alias -g sha1='openssl sha1'
-alias -g sha224='openssl sha224'
-alias -g sha256='openssl sha256'
-alias -g sha384='openssl sha384'
-alias -g sha512='openssl sha512'
 
 # Always enable colored `grep` output
 # Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage
