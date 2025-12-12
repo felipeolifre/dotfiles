@@ -94,10 +94,8 @@
 	log = true
 
 [push]
-
-    default = upstream
 	
-    # Make `git push` push relevant annotated tags when pushing branches out.
+  	# Make `git push` push relevant annotated tags when pushing branches out.
 	followTags = true
 
 [rebase]
@@ -107,14 +105,9 @@
 [user]
 
 	name = Felipe Olivera
-	email = foliverafreire@gmail.com
-	signingkey = 7279EFA3A9473ED0
+	email = 11680328+felipeolifre@users.noreply.github.com
+	signingkey = 32DECF82623C850B
 
 [commit]
 
-    gpgsign = true
-
-[init]
-
-	templatedir = /Users/felipeoliverafreire/.git-template
-
+  	gpgsign = true
