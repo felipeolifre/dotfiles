@@ -18,23 +18,14 @@ brew:
 
 # === pipx installation ===
 pipx:
-	@echo "Installing pipx..."
-	brew install pipx
-	@export PATH="$${PATH}:$$(python3 -m site --user-base)/bin"; \
 	pipx ensurepath; \
 	sudo pipx ensurepath --global || true
-	@if ! pipx list | grep -q '^uv '; then \
-		pipx install uv; \
-	fi
 
 # === uv setup (installed via pipx) ===
-uv: pipx
-	@echo "Ensuring uv is installed..."
-	@if ! command -v uv >/dev/null 2>&1; then \
-		pipx run uv --version >/dev/null 2>&1; \
-	fi
+uv:
+	pipx install uv
 
-# === Python installation via uv ===
+# === Python installation (via uv) ===
 python: uv
 	@echo "Installing default Python via uv..."
 	# Install latest Python if not already installed
