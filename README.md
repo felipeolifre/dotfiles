@@ -39,6 +39,10 @@ $ make link
     > command.
 -   Run `make unlink` to remove these symlinks.
 
+### `make pai`
+
+-   Set up [bun](https://bun.com/docs) and Personal AI Infrastructure (PAI)
+
 ## Thanks To...
 
 This seletion of dotfiles and system settings would not be possible without the

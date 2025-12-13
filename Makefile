@@ -1,7 +1,7 @@
 DOTDIR := $(shell echo $(HOME)/.dotfiles)
 NVM_DIR := $(HOME)/.nvm
 
-.PHONY: macos brew pipx uv python nvm prompt link unlink
+.PHONY: macos brew pipx uv python nvm bun pai prompt link unlink
 
 macos: brew pipx uv python nvm prompt
 	bash $(DOTDIR)/macOS/defaults.sh
@@ -45,6 +45,20 @@ nvm:
 		cd $(NVM_DIR) && git fetch --tags origin && git checkout v$$LATEST; \
 	fi
 	@echo "NVM installed at $(NVM_DIR)"
+
+# === bun installation ===
+bun:
+	curl -fsSL https://bun.sh/install | bash
+
+# === Personal AI Infrastructure (PAI) setup ===
+pai: bun
+	git clone https://github.com/danielmiessler/PAI.git ~/.claude
+	bun run ~/.claude/.claude/tools/setup/setup.ts \
+		--pai-dir ~/.claude \
+		--name "Felipe Olivera" \
+		--email 11680328+felipeolifre@users.noreply.github.com \
+		--assistant-name "Sophia" \
+		--force
 
 # === Prompt setup ===
 prompt:
