@@ -1,57 +1,60 @@
-# --- Binaries ------------------------------------------------------------------------------------
+# === Binaries ===
 
-brew "binwalk"                 # Searches a binary image for embedded files and executable code
-brew "cloc"                    # Statistics utility to count lines of code
-brew "coreutils"               # GNU File, Shell, and Text utilities
-brew "exiftool"                # Perl lib for reading and writing EXIF metadata
-brew "ffmpeg"                  # Play, record, convert, and stream audio and video
-brew "findutils"               # Collection of GNU find, xargs, and locate
-brew "git"                     # Distributed revision control system
-brew "gnupg"                   # GNU Privacy Guard (OpenPGP)
-brew "gpgme"                   # Library access to GnuPG
-brew "grc"                     # Colorize logfiles and command output
-brew "hopenpgp-tools"          # Command-line tools for OpenPGP-related operations
-brew "htop"                    # Improved top (interactive process viewer)
-brew "httpie"                  # User-friendly cURL replacement (command-line HTTP client)
-brew "icu4c@76"                # C/C++ and Java libraries for Unicode and globalization
-brew "ipcalc"                  # Calculate various network masks, etc. from a given IP address
-brew "jq"                      # Lightweight and flexible command-line JSON processor
-brew "nikto"                   # Web server scanner
-brew "nmap"                    # Port scanning utility for large networks
-brew "pinentry-mac"            # Pinentry for GPG on Mac
-brew "pipx"                    # Execute binaries from Python packages in isolated environments
-brew "pkgconf"                 # Package compiler and linker metadata toolkit
-brew "pure"                    # Pretty, minimal and fast ZSH prompt
-brew "rbenv"                   # Ruby version manager
-brew "sshuttle"                # Proxy server that works as a poor man's VPN
-brew "streamrip"               # Scriptable music downloader
-brew "telnet"                  # User interface to the TELNET protocol
-brew "testssl"                 # Tool which checks for the support of TLS/SSL ciphers and flaws
-brew "tldr"                    # Simplified and community-driven man pages
-brew "vim"                     # Vi 'workalike' with many additional features
-brew "wget"                    # Internet file retriever
-brew "ykman"                   # Tool for managing your YubiKey configuration
-brew "ykpers"                  # YubiKey personalization library and tool
-brew "zsh"                     # UNIX shell (command interpreter)
-brew "zsh-autosuggestions"     # Fish-like fast/unobtrusive autosuggestions for zsh
-brew "zsh-syntax-highlighting" # Fish shell like syntax highlighting for zsh
+brew "binwalk"                  # Searches a binary image for embedded files and executable code
+brew "cloc"                     # Statistics utility to count lines of code
+brew "coreutils"                # GNU File, Shell, and Text utilities
+brew "direnv"                   # Load/unload environment variables based on $PWD
+brew "exiftool"                 # Perl lib for reading and writing EXIF metadata
+brew "fabric-ai"                # Open-source framework for augmenting humans using AI
+brew "ffmpeg"                   # Play, record, convert, and stream audio and video
+brew "findutils"                # Collection of GNU find, xargs, and locate
+brew "git"                      # Distributed revision control system
+brew "gnupg"                    # GNU Privacy Guard (OpenPGP)
+brew "gpgme"                    # Library access to GnuPG
+brew "grc"                      # Colorize logfiles and command output
+brew "hopenpgp-tools"           # Command-line tools for OpenPGP-related operations
+brew "htop"                     # Improved top (interactive process viewer)
+brew "httpie"                   # User-friendly cURL replacement (command-line HTTP client)
+brew "icu4c@76"                 # C/C++ and Java libraries for Unicode and globalization
+brew "ipcalc"                   # Calculate various network masks, etc. from a given IP address
+brew "jq"                       # Lightweight and flexible command-line JSON processor
+brew "nikto"                    # Web server scanner
+brew "nmap"                     # Port scanning utility for large networks
+brew "pinentry-mac"             # Pinentry for GPG on Mac
+brew "pipx"                     # Execute binaries from Python packages in isolated environments
+brew "pkgconf"                  # Package compiler and linker metadata toolkit
+brew "pure"                     # Pretty, minimal and fast ZSH prompt
+brew "rbenv"                    # Ruby version manager
+brew "sshuttle"                 # Proxy server that works as a poor man's VPN
+brew "streamrip"                # Scriptable music downloader
+brew "telnet"                   # User interface to the TELNET protocol
+brew "testssl"                  # Tool which checks for the support of TLS/SSL ciphers and flaws
+brew "tldr"                     # Simplified and community-driven man pages
+brew "vim"                      # Vi 'workalike' with many additional features
+brew "wget"                     # Internet file retriever
+brew "ykman"                    # Tool for managing your YubiKey configuration
+brew "ykpers"                   # YubiKey personalization library and tool
+brew "zsh"                      # UNIX shell (command interpreter)
+brew "zsh-autosuggestions"      # Fish-like fast/unobtrusive autosuggestions for zsh
+brew "zsh-syntax-highlighting"  # Fish shell like syntax highlighting for zsh
 
-# --- Applications --------------------------------------------------------------------------------
+# === Applications ===
 
-cask "bruno"                   # Open source IDE for exploring and testing APIs
-cask "docker-desktop"          # Build and share containerized applications and microservices
-cask "thunderbird"             # Customizable email client
-cask "transmission"            # Open-source BitTorrent client
-cask "visual-studio-code"      # Open-source code editor
-cask "vlc"                     # Multimedia player
-cask "wireshark-app"           # Network protocol analyzer
-cask "zoom"                    # Video communication and virtual meeting platform
+cask "bruno"                    # Open source IDE for exploring and testing APIs
+cask "docker-desktop"           # Build and share containerized applications and microservices
+cask "thunderbird"              # Customizable email client
+cask "transmission"             # Open-source BitTorrent client
+cask "visual-studio-code"       # Open-source code editor
+cask "vlc"                      # Multimedia player
+cask "warp"                     # Terminal with built-in AI agents
+cask "wireshark-app"            # Network protocol analyzer
+cask "zoom"                     # Video communication and virtual meeting platform
 
-# --- Fonts ---------------------------------------------------------------------------------------
+# === Fonts ===
 
 cask "font-fira-code"
 
-# --- VSCode Extensions ---------------------------------------------------------------------------
+# === VS Code Extensions ===
 
 vscode "eamodio.gitlens"
 vscode "github.copilot"
