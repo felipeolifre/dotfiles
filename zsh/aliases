@@ -68,6 +68,9 @@ alias nmap='grc nmap'
 # Prefer `vim` over `vi`
 alias vi='vim'
 
+# Homebrew makes `fabric` available as `fabric-ai`
+alias fabric='fabric-ai'
+
 # ¯\_(ツ)_/¯
 alias shrug='echo "¯\_(ツ)_/¯" | pbcopy'
 
