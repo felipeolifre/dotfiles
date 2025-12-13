@@ -45,3 +45,7 @@ bindkey -e
 
 # Set GPG teletypewriter
 export GPG_TTY=$(tty)
+
+# Initialize `direnv`
+eval "$(direnv hook zsh)"
+
