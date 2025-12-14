@@ -24,11 +24,11 @@
     "prettier.tabWidth": 4,
     "prettier.proseWrap": "preserve",
     "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.defaultFormatter": "prettier.prettier-vscode",
         "editor.tabSize": 2
     },
     "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.defaultFormatter": "prettier.prettier-vscode",
         "editor.tabSize": 2
     },
     "[python]": {
@@ -37,17 +37,12 @@
     "[terraform]": {
         "editor.tabSize": 4
     },
-    // === Workbench / Themes ===
-    "workbench.colorTheme": "One Dark Pro",
-    "workbench.preferredDarkColorTheme": "One Dark Pro",
+    "workbench.preferredDarkColorTheme": "GitHub Dark",
     "workbench.preferredLightColorTheme": "GitHub Light",
     "workbench.editor.highlightModifiedTabs": true,
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
     // === Peacock Project Colors ===
     "peacock.favoriteColors": [
         {
@@ -127,5 +122,7 @@
     // === Screens / Optional Improvements ===
     "editor.minimap.renderCharacters": true,
     "editor.renderWhitespace": "boundary",
-    "editor.formatOnPaste": true
+    "editor.formatOnPaste": true,
+    "claudeCode.preferredLocation": "panel",
+    "claudeCode.useTerminal": true
 }
